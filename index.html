@@ -3151,31 +3151,332 @@
 
 
 
+<div class="section">
+    <div id="map" style="width: 100%; height: 300px;"></div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA449aIG3KPUMosVJuhKg9Z0YR-tIoDeJs&callback=initMap&v=weekly"
+        defer></script>
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 11,
+                center: { lat: 47.19851, lng: 7.46912 },
+            });
+
+            const image = {
+                url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+                // This marker is 20 pixels wide by 32 pixels high.
+                size: new google.maps.Size(20, 32),
+                // The origin for this image is (0, 0).
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the base of the flagpole at (0, 32).
+                anchor: new google.maps.Point(0, 32),
+            };
+
+            const image2 = {
+                url: "https://bestatterportal.ch/wp-content/uploads/2022/logo.png",
+                // This marker is 20 pixels wide by 32 pixels high.
+                size: new google.maps.Size(20, 32),
+                // The origin for this image is (0, 0).
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the base of the flagpole at (0, 32).
+                anchor: new google.maps.Point(0, 32),
+            };
+
+            new google.maps.Marker({
+                position: { lat: 47.20493, lng: 7.52611 },
+                map,
+                title: "Hello World!",
+                icon: image,
+            });
+
+            new google.maps.Marker({
+                position: { lat: 47.19851, lng: 7.46912 },
+                map,
+                title: "Hello World!",
+                icon: image2,
+            });
+        }
+
+        window.initMap = initMap;
+    </script>
+        </div>
 
 
 
 
 
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="collapse-container collapsed">
+                        <div class="card">
+                            <div data-bs-toggle="collapse" href="#collapseExample2250744582727">
+                                <div class="faq-header">
+                                    <p class="question" style="color:#2F5D63;">
+                                        Was kostet ein Grabstein, Grabplatte?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseExample2250744582727">
+                                <p>Ein klassischer Grabstein kostet zwischen 3`500.- und 15`000.- CHF inkl. Setzen und
+                                    Inschrift. Die Steinart und -form, sowie die Gestaltung und Gravur haben eine Auswirkung
+                                    auf den Preis. Ein/e SteinbildhauerIn macht Ihnen gerne vorab eine Offerte.</p>
+                                <div class="link-btn">
+                                    Mehr erfahren
+                                </div>
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-container collapsed">
+                        <div class="card">
+                            <div data-bs-toggle="collapse" href="#collapseExample22481853025139">
+                                <div class="faq-header">
+                                    <p class="question" style="color:#2F5D63;">
+                                        Was kostet eine Todesanzeige, Danksagungsanzeige?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseExample22481853025139">
+                                <p>Die Zeitungen führen einen mm-Preis, das heisst, der Preis setzt sich aus der Grösse der
+                                    Anzeige und ihrer Auflage zusammen. D.h. je grösser die Anzeiger und die
+                                    Auflage/Reichweite der Zeitung, desto teurer. Sonderwünsche wie Farbfoto oder
+                                    Hintergrund werden zusätzlich in Rechnung gestellt. So kann eine Anzeige in einem
+                                    amtlichen Anzeiger gut und gerne 800.- Franken kosten. Eine Schaltung eines Inserats in
+                                    einer Tageszeitung kann 1200.- bis 3000.- Franken kosten. Lassen Sie sich von Ihrem
+                                    Bestattungsinstitut eine Offerte erstellen.</p>
+                                <div class="link-btn">
+                                    Mehr erfahren
+                                </div>
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-container collapsed">
+                        <div class="card">
+                            <div data-bs-toggle="collapse" href="#collapseExample224668512939">
+                                <div class="faq-header">
+                                    <p class="question" style="color:#2F5D63;">
+                                        Was kostet eine Urne?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseExample224668512939">
+                                <p>Eine Standardurne vom Krematorium kann weniger als 100.- Franken kosten. Eine einfache
+                                    Urne vom/von der BestatterIn kann zwischen 100.- und 300.- Franken kosten. Aufwändig
+                                    oder von Hand hergestellte Urnen können um einiges teurer sein. Es gibt auch Luxusurnen
+                                    im tausendstelligen Bereich. Als Urne dürfen Sie aber auch ein eigenes Gefäss mit Deckel
+                                    wählen, zum Beispiel einen Krug. Einzig bei einer Beisetzung in ein Erdgrab auf dem
+                                    Friedhof gilt es, vorher im Friedhofsreglement nachzulesen, welche Urnen erlaubt sind.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 mb-4">
+                        <div class="card">
+                            <div class="row pb-5">
+                                <div class="col d-flex">
+                                    <img src="https://a.mktgcdn.com/p/IdP5814q1HKgirBsYr7QA0XEfsv3EVR-B0pglQTIVjI/260x260.png" class="mx-auto w-50 lazy" alt="">
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h1 class="h5 mb-3">Storz Bestattung l Storz Pompes Funèbres</h1>
+                                <p class="">Reuchenettestrasse 7<br>2502 Biel CH</p>
+                                <p>
+                                    <a href="mailto:mail@storz.ch">mail@storz.ch</a><br>
+                                    <a href="tel:+41323426444">132 342 64 44</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <div class="card">
+                            <div class="row pb-5">
+                                <div class="col d-flex">
+                                    <img src="https://a.mktgcdn.com/p/IdP5814q1HKgirBsYr7QA0XEfsv3EVR-B0pglQTIVjI/260x260.png" class="mx-auto w-50 lazy" alt="">
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h1 class="h5 mb-3">Storz Bestattung l Storz Pompes Funèbres</h1>
+                                <p class="">Reuchenettestrasse 7<br>2502 Biel CH</p>
+                                <p>
+                                    <a href="mailto:mail@storz.ch">mail@storz.ch</a><br>
+                                    <a href="tel:+41323426444">132 342 64 44</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <div class="card">
+                            <div class="row pb-5">
+                                <div class="col d-flex">
+                                    <img src="https://a.mktgcdn.com/p/IdP5814q1HKgirBsYr7QA0XEfsv3EVR-B0pglQTIVjI/260x260.png" class="mx-auto w-50 lazy" alt="">
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h1 class="h5 mb-3">Storz Bestattung l Storz Pompes Funèbres</h1>
+                                <p class="">Reuchenettestrasse 7<br>2502 Biel CH</p>
+                                <p>
+                                    <a href="mailto:mail@storz.ch">mail@storz.ch</a><br>
+                                    <a href="tel:+41323426444">132 342 64 44</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 mb-4">
+                        <div class="card align-items-center">
+                            <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
+                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800" height="742" alt="14">
+                            </div>
+                            <div class="ms-3 ms-sm-3 ms-lg-0">
+                                <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testing</h6>
+                                <p class="small mb-0">Lorem Ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 mb-4">
+                        <div class="card align-items-center">
+                            <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
+                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/11.png" width="800" height="929" alt="11">
+                            </div>
+                            <div class="ms-3 ms-sm-3 ms-lg-0">
+                                <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testingaaaaaaa</h6>
+                                <p class="small mb-0">Lorem Ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 mb-4">
+                        <div class="card align-items-center">
+                            <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
+                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800" height="742" alt="14">
+                            </div>
+                            <div class="ms-3 ms-sm-3 ms-lg-0">
+                                <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testing</h6>
+                                <p class="small mb-0">Lorem Ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 mb-4">
+                        <div class="card align-items-center">
+                            <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
+                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800" height="742" alt="14">
+                            </div>
+                            <div class="ms-3 ms-sm-3 ms-lg-0">
+                                <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testing</h6>
+                                <p class="small mb-0">Lorem Ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 mb-4">
+                        <div class="card align-items-center">
+                            <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
+                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800" height="742" alt="14">
+                            </div>
+                            <div class="ms-3 ms-sm-3 ms-lg-0">
+                                <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testing</h6>
+                                <p class="small mb-0">Lorem Ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 mb-4">
+                        <div class="card">
+                            <div class="row pb-3">
+                                <div class="col-auto">
+                                    <div class="heading-icon type3">
+                                          <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col align-self-center">
+                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa</h4>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-4">
+                        <div class="card">
+                            <div class="row pb-3">
+                                <div class="col-auto">
+                                    <div class="heading-icon type3">
+                                          <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col align-self-center">
+                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa</h4>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-4">
+                        <div class="card">
+                            <div class="row pb-3">
+                                <div class="col-auto">
+                                    <div class="heading-icon type3">
+                                          <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col align-self-center">
+                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa</h4>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-4">
+                        <div class="card">
+                            <div class="row pb-3">
+                                <div class="col-auto">
+                                    <div class="heading-icon type3">
+                                          <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col align-self-center">
+                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa</h4>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <div class="section">
@@ -3186,6 +3487,7 @@
                     <div class="result-direct-answer"></div>
                     <div class="result-universal-results"></div>
                     <div class="result-question-submission-container"></div>
+                    <div class="map-container"></div>
                     <script>
                         function fullSearch() {
                             ANSWERS.addComponent("SearchBar", {
@@ -3233,8 +3535,34 @@
                                 container: ".result-direct-answer"
                             });
 
+                            ANSWERS.addComponent('Map', {
+                                container: '.map-container',
+                                mapProvider: 'google',
+                                apiKey: 'AIzaSyA449aIG3KPUMosVJuhKg9Z0YR-tIoDeJs',
+                                pin: {
+                                    svg: "https://bestatterportal.ch/wp-content/uploads/2022/logo.svg",
+                                },
+                                noResults: {
+                                    displayAllResults: true,
+                                    visible: true
+                                }
+                            });
+
                             ANSWERS.addComponent("UniversalResults", {
                                 container: ".result-universal-results",
+                                render: function(data) {
+                                    html = "";
+                                    if (data.isSearchComplete) {
+                                        html += JSON.stringify(data);
+                                        console.log(data.sections.length);
+                                        console.log(data);
+                                        for (var i = 0; i < data.sections.length; i++){
+                                            console.log(data.sections[i]);
+                                        }
+                                    };
+                                    
+                                    return html;
+                                },
                                 config: {
                                     standorte: {
                                         icon: "pin",
