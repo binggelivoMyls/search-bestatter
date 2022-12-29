@@ -1716,8 +1716,8 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        function insideSearchbar(){};
-        function fullSearch(){};
+        function insideSearchbar() { };
+        function fullSearch() { };
     </script>
     <style>
         :root {
@@ -1730,7 +1730,7 @@
             --yxt-searchbar-focus-shadow: unset;
         }
 
-        .yxt-AutoComplete{
+        .yxt-AutoComplete {
             overflow: hidden;
         }
     </style>
@@ -2026,14 +2026,17 @@
                         <li id="menu-item-2328"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2328 nav-element">
                             <a href="https://bestatterportal.ch/schweizerischer-verband-der-bestattungsdienste-svb/">Schweizerischer
-                                Verband der Bestattungsdienste SVB</a></li>
+                                Verband der Bestattungsdienste SVB</a>
+                        </li>
                         <li id="menu-item-2329"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2329 nav-element">
                             <a href="https://bestatterportal.ch/ombudsstelle-bestattungen-und-todesfaelle/">Ombudsstelle
-                                Bestattungen und Todesfälle</a></li>
+                                Bestattungen und Todesfälle</a>
+                        </li>
                         <li id="menu-item-2333"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2333 nav-element">
-                            <a href="https://bestatterportal.ch/beruf-bestatter-in/">Beruf Bestatter/-in</a></li>
+                            <a href="https://bestatterportal.ch/beruf-bestatter-in/">Beruf Bestatter/-in</a>
+                        </li>
                         <li id="menu-item-2332"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2332 nav-element">
                             <a href="https://bestatterportal.ch/ausbildung-bestatter-in/">Ausbildung Bestatter/-in</a>
@@ -2041,11 +2044,13 @@
                         <li id="menu-item-2331"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2331 nav-element">
                             <a href="https://bestatterportal.ch/weiterbildung-bestatter-in/">Weiterbildung
-                                Bestatter/-in</a></li>
+                                Bestatter/-in</a>
+                        </li>
                         <li id="menu-item-2330"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2330 nav-element">
                             <a href="https://bestatterportal.ch/intern-nur-fuer-mitglieder/">Intern nur für
-                                Mitglieder</a></li>
+                                Mitglieder</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -2085,9 +2090,7 @@
 
                         <h3 class="newh">
                             Stellen Sie eine persönliche Frage </h3>
-                            <div class="search-container mb-5">
-                                
-                                
+                        <div class="search-container mb-5">
 
 
 
@@ -2133,113 +2136,118 @@
 
 
 
-                                <div class="search-bar-searchsection modal-content component yxt-Answers-component yxt-SearchBar-wrapper"></div>
-                                <script>
-                                    function insideSearchbar() {
-                                        ANSWERS.addComponent("SearchBar", {
-                                            container: ".search-bar-searchsection",
-                                            customIconUrl: "https://bestatterportal.ch/wp-content/themes/bestatter-ch/bestatterfile/assets/searchglass.png",
-                                            redirectUrl: "https://bestatterportal.ch/result/",
-                                            name: "search-bar-searchsection"
-                                        });
 
-                                        var url = `https://liveapi.yext.com/v2/accounts/me/answers/autocomplete`;
-                                        url += `?v=20190101`;
-                                        url += `&api_key=` + api;
-                                        url += `&sessionTrackingEnabled=false`;
-                                        url += `&experienceKey=` + experienceKey;
-                                        url += `&input=`;
-                                        url += `&version=PRODUCTION`;
-                                        url += `&locale=` + locale;
 
-                                        axios.get(url).then(function (response) {
-                                            // Get strings from response
-                                            const strings = response.data.response.results.map(function (r) {
-                                                return r.value;
-                                            });
-
-                                            // Set up Typed
-                                            var options = {
-                                                strings,
-                                                showCursor: true,
-                                                cursorChar: "|",
-                                                typeSpeed: 45,
-                                                backSpeed: 20,
-                                                smartBackspace: true,
-                                                loop: true,
-                                                startDelay: 500,
-                                                backDelay: 2000,
-                                                attr: "placeholder",
-                                            };
-
-                                            var typed = new Typed(".js-yext-query", options);
-                                        });
-                                    };
-                                </script>
-                                <style>                            
-                                    .search-bar-searchsection .yxt-AutoComplete {
-                                        border: 4.5px solid #2F5D63 !important;
-                                        border-top: 0px;
-                                        border-radius: 0px 0px 20px 20px;
-                                        background-color: #ffffff;
-                                    }
-                                    .search-bar-searchsection .js-yext-submit{
-                                        border-radius: 0px 10px 10px 0px;
-                                    }
-                                </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                            <div
+                                class="search-bar-searchsection modal-content component yxt-Answers-component yxt-SearchBar-wrapper">
                             </div>
+                            <script>
+                                function insideSearchbar() {
+                                    ANSWERS.addComponent("SearchBar", {
+                                        container: ".search-bar-searchsection",
+                                        customIconUrl: "https://bestatterportal.ch/wp-content/themes/bestatter-ch/bestatterfile/assets/searchglass.png",
+                                        redirectUrl: "https://bestatterportal.ch/result/",
+                                        name: "search-bar-searchsection"
+                                    });
+
+                                    var url = `https://liveapi.yext.com/v2/accounts/me/answers/autocomplete`;
+                                    url += `?v=20190101`;
+                                    url += `&api_key=` + api;
+                                    url += `&sessionTrackingEnabled=false`;
+                                    url += `&experienceKey=` + experienceKey;
+                                    url += `&input=`;
+                                    url += `&version=PRODUCTION`;
+                                    url += `&locale=` + locale;
+
+                                    axios.get(url).then(function (response) {
+                                        // Get strings from response
+                                        const strings = response.data.response.results.map(function (r) {
+                                            return r.value;
+                                        });
+
+                                        // Set up Typed
+                                        var options = {
+                                            strings,
+                                            showCursor: true,
+                                            cursorChar: "|",
+                                            typeSpeed: 45,
+                                            backSpeed: 20,
+                                            smartBackspace: true,
+                                            loop: true,
+                                            startDelay: 500,
+                                            backDelay: 2000,
+                                            attr: "placeholder",
+                                        };
+
+                                        var typed = new Typed(".js-yext-query", options);
+                                    });
+                                };
+                            </script>
+                            <style>
+                                .search-bar-searchsection .yxt-AutoComplete {
+                                    border: 4.5px solid #2F5D63 !important;
+                                    border-top: 0px;
+                                    border-radius: 0px 0px 20px 20px;
+                                    background-color: #ffffff;
+                                }
+
+                                .search-bar-searchsection .js-yext-submit {
+                                    border-radius: 0px 10px 10px 0px;
+                                }
+                            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
 
                         <p class="newp">
                             Das Portal bestatter.ch beantwortet Ihnen alle Fragen Rund um die Themen Bestattung und
@@ -3151,55 +3159,55 @@
 
 
 
-<div class="section">
-    <div id="map" style="width: 100%; height: 300px;"></div>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA449aIG3KPUMosVJuhKg9Z0YR-tIoDeJs&callback=initMap&v=weekly"
-        defer></script>
-    <script>
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 11,
-                center: { lat: 47.19851, lng: 7.46912 },
-            });
+        <div class="section">
+            <div id="map" style="width: 100%; height: 300px;"></div>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA449aIG3KPUMosVJuhKg9Z0YR-tIoDeJs&callback=initMap&v=weekly"
+                defer></script>
+            <script>
+                function initMap() {
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                        zoom: 11,
+                        center: { lat: 47.19851, lng: 7.46912 },
+                    });
 
-            const image = {
-                url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-                // This marker is 20 pixels wide by 32 pixels high.
-                size: new google.maps.Size(20, 32),
-                // The origin for this image is (0, 0).
-                origin: new google.maps.Point(0, 0),
-                // The anchor for this image is the base of the flagpole at (0, 32).
-                anchor: new google.maps.Point(0, 32),
-            };
+                    const image = {
+                        url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+                        // This marker is 20 pixels wide by 32 pixels high.
+                        size: new google.maps.Size(20, 32),
+                        // The origin for this image is (0, 0).
+                        origin: new google.maps.Point(0, 0),
+                        // The anchor for this image is the base of the flagpole at (0, 32).
+                        anchor: new google.maps.Point(0, 32),
+                    };
 
-            const image2 = {
-                url: "https://bestatterportal.ch/wp-content/uploads/2022/logo.png",
-                // This marker is 20 pixels wide by 32 pixels high.
-                size: new google.maps.Size(20, 32),
-                // The origin for this image is (0, 0).
-                origin: new google.maps.Point(0, 0),
-                // The anchor for this image is the base of the flagpole at (0, 32).
-                anchor: new google.maps.Point(0, 32),
-            };
+                    const image2 = {
+                        url: "https://bestatterportal.ch/wp-content/uploads/2022/logo.png",
+                        // This marker is 20 pixels wide by 32 pixels high.
+                        size: new google.maps.Size(20, 32),
+                        // The origin for this image is (0, 0).
+                        origin: new google.maps.Point(0, 0),
+                        // The anchor for this image is the base of the flagpole at (0, 32).
+                        anchor: new google.maps.Point(0, 32),
+                    };
 
-            new google.maps.Marker({
-                position: { lat: 47.20493, lng: 7.52611 },
-                map,
-                title: "Hello World!",
-                icon: image,
-            });
+                    new google.maps.Marker({
+                        position: { lat: 47.20493, lng: 7.52611 },
+                        map,
+                        title: "Hello World!",
+                        icon: image,
+                    });
 
-            new google.maps.Marker({
-                position: { lat: 47.19851, lng: 7.46912 },
-                map,
-                title: "Hello World!",
-                icon: image2,
-            });
-        }
+                    new google.maps.Marker({
+                        position: { lat: 47.19851, lng: 7.46912 },
+                        map,
+                        title: "Hello World!",
+                        icon: image2,
+                    });
+                }
 
-        window.initMap = initMap;
-    </script>
+                window.initMap = initMap;
+            </script>
         </div>
 
 
@@ -3220,7 +3228,8 @@
                             </div>
                             <div class="collapse" id="collapseExample2250744582727">
                                 <p>Ein klassischer Grabstein kostet zwischen 3`500.- und 15`000.- CHF inkl. Setzen und
-                                    Inschrift. Die Steinart und -form, sowie die Gestaltung und Gravur haben eine Auswirkung
+                                    Inschrift. Die Steinart und -form, sowie die Gestaltung und Gravur haben eine
+                                    Auswirkung
                                     auf den Preis. Ein/e SteinbildhauerIn macht Ihnen gerne vorab eine Offerte.</p>
                                 <div class="link-btn">
                                     Mehr erfahren
@@ -3239,11 +3248,13 @@
                                 </div>
                             </div>
                             <div class="collapse" id="collapseExample22481853025139">
-                                <p>Die Zeitungen führen einen mm-Preis, das heisst, der Preis setzt sich aus der Grösse der
+                                <p>Die Zeitungen führen einen mm-Preis, das heisst, der Preis setzt sich aus der Grösse
+                                    der
                                     Anzeige und ihrer Auflage zusammen. D.h. je grösser die Anzeiger und die
                                     Auflage/Reichweite der Zeitung, desto teurer. Sonderwünsche wie Farbfoto oder
                                     Hintergrund werden zusätzlich in Rechnung gestellt. So kann eine Anzeige in einem
-                                    amtlichen Anzeiger gut und gerne 800.- Franken kosten. Eine Schaltung eines Inserats in
+                                    amtlichen Anzeiger gut und gerne 800.- Franken kosten. Eine Schaltung eines Inserats
+                                    in
                                     einer Tageszeitung kann 1200.- bis 3000.- Franken kosten. Lassen Sie sich von Ihrem
                                     Bestattungsinstitut eine Offerte erstellen.</p>
                                 <div class="link-btn">
@@ -3263,12 +3274,16 @@
                                 </div>
                             </div>
                             <div class="collapse" id="collapseExample224668512939">
-                                <p>Eine Standardurne vom Krematorium kann weniger als 100.- Franken kosten. Eine einfache
+                                <p>Eine Standardurne vom Krematorium kann weniger als 100.- Franken kosten. Eine
+                                    einfache
                                     Urne vom/von der BestatterIn kann zwischen 100.- und 300.- Franken kosten. Aufwändig
-                                    oder von Hand hergestellte Urnen können um einiges teurer sein. Es gibt auch Luxusurnen
-                                    im tausendstelligen Bereich. Als Urne dürfen Sie aber auch ein eigenes Gefäss mit Deckel
+                                    oder von Hand hergestellte Urnen können um einiges teurer sein. Es gibt auch
+                                    Luxusurnen
+                                    im tausendstelligen Bereich. Als Urne dürfen Sie aber auch ein eigenes Gefäss mit
+                                    Deckel
                                     wählen, zum Beispiel einen Krug. Einzig bei einer Beisetzung in ein Erdgrab auf dem
-                                    Friedhof gilt es, vorher im Friedhofsreglement nachzulesen, welche Urnen erlaubt sind.
+                                    Friedhof gilt es, vorher im Friedhofsreglement nachzulesen, welche Urnen erlaubt
+                                    sind.
                                 </p>
                             </div>
                         </div>
@@ -3286,7 +3301,8 @@
                         <div class="card">
                             <div class="row pb-5">
                                 <div class="col d-flex">
-                                    <img src="https://a.mktgcdn.com/p/IdP5814q1HKgirBsYr7QA0XEfsv3EVR-B0pglQTIVjI/260x260.png" class="mx-auto w-50 lazy" alt="">
+                                    <img src="https://a.mktgcdn.com/p/IdP5814q1HKgirBsYr7QA0XEfsv3EVR-B0pglQTIVjI/260x260.png"
+                                        class="mx-auto w-50 lazy" alt="">
                                 </div>
                             </div>
                             <div class="content">
@@ -3303,7 +3319,8 @@
                         <div class="card">
                             <div class="row pb-5">
                                 <div class="col d-flex">
-                                    <img src="https://a.mktgcdn.com/p/IdP5814q1HKgirBsYr7QA0XEfsv3EVR-B0pglQTIVjI/260x260.png" class="mx-auto w-50 lazy" alt="">
+                                    <img src="https://a.mktgcdn.com/p/IdP5814q1HKgirBsYr7QA0XEfsv3EVR-B0pglQTIVjI/260x260.png"
+                                        class="mx-auto w-50 lazy" alt="">
                                 </div>
                             </div>
                             <div class="content">
@@ -3320,7 +3337,8 @@
                         <div class="card">
                             <div class="row pb-5">
                                 <div class="col d-flex">
-                                    <img src="https://a.mktgcdn.com/p/IdP5814q1HKgirBsYr7QA0XEfsv3EVR-B0pglQTIVjI/260x260.png" class="mx-auto w-50 lazy" alt="">
+                                    <img src="https://a.mktgcdn.com/p/IdP5814q1HKgirBsYr7QA0XEfsv3EVR-B0pglQTIVjI/260x260.png"
+                                        class="mx-auto w-50 lazy" alt="">
                                 </div>
                             </div>
                             <div class="content">
@@ -3345,7 +3363,9 @@
                     <div class="col-3 mb-4">
                         <div class="card align-items-center">
                             <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
-                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800" height="742" alt="14">
+                                <img class="of-cover lazy"
+                                    src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800"
+                                    height="742" alt="14">
                             </div>
                             <div class="ms-3 ms-sm-3 ms-lg-0">
                                 <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testing</h6>
@@ -3356,7 +3376,9 @@
                     <div class="col-3 mb-4">
                         <div class="card align-items-center">
                             <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
-                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/11.png" width="800" height="929" alt="11">
+                                <img class="of-cover lazy"
+                                    src="https://bestatterportal.ch/wp-content/uploads/2022/04/11.png" width="800"
+                                    height="929" alt="11">
                             </div>
                             <div class="ms-3 ms-sm-3 ms-lg-0">
                                 <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testingaaaaaaa</h6>
@@ -3367,7 +3389,9 @@
                     <div class="col-3 mb-4">
                         <div class="card align-items-center">
                             <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
-                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800" height="742" alt="14">
+                                <img class="of-cover lazy"
+                                    src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800"
+                                    height="742" alt="14">
                             </div>
                             <div class="ms-3 ms-sm-3 ms-lg-0">
                                 <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testing</h6>
@@ -3378,7 +3402,9 @@
                     <div class="col-3 mb-4">
                         <div class="card align-items-center">
                             <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
-                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800" height="742" alt="14">
+                                <img class="of-cover lazy"
+                                    src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800"
+                                    height="742" alt="14">
                             </div>
                             <div class="ms-3 ms-sm-3 ms-lg-0">
                                 <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testing</h6>
@@ -3389,7 +3415,9 @@
                     <div class="col-3 mb-4">
                         <div class="card align-items-center">
                             <div class="w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden">
-                                <img class="of-cover lazy" src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800" height="742" alt="14">
+                                <img class="of-cover lazy"
+                                    src="https://bestatterportal.ch/wp-content/uploads/2022/04/14.png" width="800"
+                                    height="742" alt="14">
                             </div>
                             <div class="ms-3 ms-sm-3 ms-lg-0">
                                 <h6 class="sans mb-2 mt-2 mt-lg-4">Lorem Ipsum Testing</h6>
@@ -3411,15 +3439,17 @@
                             <div class="row pb-3">
                                 <div class="col-auto">
                                     <div class="heading-icon type3">
-                                          <i class="fas fa-envelope" aria-hidden="true"></i>
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <div class="col align-self-center">
-                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa</h4>
+                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa
+                                    </h4>
                                 </div>
                             </div>
                             <div class="content">
-                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing.</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of
+                                    the printing. Lorem Ipsum is simply dummy text of the printing.</p>
                             </div>
                         </div>
                     </div>
@@ -3428,15 +3458,17 @@
                             <div class="row pb-3">
                                 <div class="col-auto">
                                     <div class="heading-icon type3">
-                                          <i class="fas fa-envelope" aria-hidden="true"></i>
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <div class="col align-self-center">
-                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa</h4>
+                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa
+                                    </h4>
                                 </div>
                             </div>
                             <div class="content">
-                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing.</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of
+                                    the printing. Lorem Ipsum is simply dummy text of the printing.</p>
                             </div>
                         </div>
                     </div>
@@ -3445,15 +3477,17 @@
                             <div class="row pb-3">
                                 <div class="col-auto">
                                     <div class="heading-icon type3">
-                                          <i class="fas fa-envelope" aria-hidden="true"></i>
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <div class="col align-self-center">
-                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa</h4>
+                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa
+                                    </h4>
                                 </div>
                             </div>
                             <div class="content">
-                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing.</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of
+                                    the printing. Lorem Ipsum is simply dummy text of the printing.</p>
                             </div>
                         </div>
                     </div>
@@ -3462,15 +3496,17 @@
                             <div class="row pb-3">
                                 <div class="col-auto">
                                     <div class="heading-icon type3">
-                                          <i class="fas fa-envelope" aria-hidden="true"></i>
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <div class="col align-self-center">
-                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa</h4>
+                                    <h4 class="card-title sans">Lorem Ipsum is simply dummy text of the printing. aaa
+                                    </h4>
                                 </div>
                             </div>
                             <div class="content">
-                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing.</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of
+                                    the printing. Lorem Ipsum is simply dummy text of the printing.</p>
                             </div>
                         </div>
                     </div>
@@ -3550,57 +3586,256 @@
 
                             ANSWERS.addComponent("UniversalResults", {
                                 container: ".result-universal-results",
-                                render: function(data) {
+                                render: function (data) {
                                     html = "";
                                     if (data.isSearchComplete) {
-                                        html += JSON.stringify(data);
-                                        console.log(data.sections.length);
-                                        console.log(data);
-                                        for (var i = 0; i < data.sections.length; i++){
-                                            console.log(data.sections[i]);
-                                        }
-                                    };
-                                    
-                                    return html;
-                                },
-                                config: {
-                                    standorte: {
-                                        icon: "pin",
-                                        card: {},
-                                        appliedFilters: {
-                                            show: true,
-                                            showFieldNames: true,
-                                            hiddenFields: ["builtin.entityType"],
-                                            delimiter: "|",
-                                            labelText: "Filters applied to this search:",
-                                            removableLabelText: "Remove this filter"
-                                        }
-                                    },
-                                    faqs: {
-                                        icon: "support",
-                                        title: "Fragen und Antworten",
-                                        card: {
-                                            cardType: "Accordion",
-                                            dataMappings: {
-                                                title: (item) => item.name,
-                                                details: (item) => mdconverter.makeHtml(item.answer.replace(/(\\)/gm, "").replace(/</gm, "&lt;").replace(/>/gm, "&gt;").replace(/\)\[/gm, ")\n\n[")),
-                                                url: "#"
+                                        for (var i = 0; data.sections.length > i; i++) {
+                                            console.log(data.sections[i].verticalConfigId);
+
+
+
+
+
+
+
+
+
+
+
+
+                                            /*
+                                                Standorte
+                                            */
+
+
+
+                                            if (data.sections[i].verticalConfigId == "standorte") {
+                                                var indata = data.sections[i].results;
+                                                console.log(indata);
+                                                html += `<div class="container"><div class="row"><h3 class="mt-4">Bestattungsunternehmen</h3>`;
+                                                if (indata.length == 1) {
+                                                    html += `<div class="col-12 mb-4">
+                                                                <div class="card">`;
+                                                    if (indata[0]._raw.logo != undefined) {
+                                                        html += `<div class="row pb-5"><div class="col d-flex"><img src="` + indata[0]._raw.logo.image.url + `" class="mx-auto w-25 lazy" alt=""></div></div>`;
+                                                    }
+                                                    html += `<div class="content">
+                                                                <h4 class="h5 mb-3">` + indata[0].title + `</h4>
+                                                                <div class="row">
+                                                                <div class="col-6">
+                                                                <p class="">` + indata[0]._raw.address.line1 + `<br>` + indata[0]._raw.address.postalCode + ' ' + indata[0]._raw.address.city;
+                                                    if (indata[0]._raw.address.countryCode != "CH") {
+                                                        html += " " + indata[0]._raw.address.countryCode;
+                                                    }
+                                                    html += `</p>`;
+                                                    if (indata[0]._raw.emails[0] != undefined || indata[0]._raw.mainPhone != undefined || indata[0]._raw.website != undefined) {
+                                                        html += `<p>`;
+                                                        if (indata[0]._raw.emails != undefined) {
+                                                            html += `<a href="mailto:` + indata[0]._raw.emails[0] + `">` + indata[0]._raw.emails[0] + `</a><br>`
+                                                        }
+                                                        if (indata[0]._raw.mainPhone != undefined) {
+                                                            html += `<a href="tel:` + indata[0]._raw.mainPhone + `">` + indata[0]._raw.mainPhone + `</a><br>`
+                                                        }
+                                                        if (indata[0]._raw.website != undefined) {
+                                                            html += `<a href="` + indata[0]._raw.website + `">` + indata[0]._raw.website + `</a><br>`
+                                                        }
+                                                        html += `</p>`;
+                                                    }
+                                                    html += `</div>`;
+                                                    if (indata[0]._raw.c_nameAnsprechsperson != undefined) {
+                                                        html += `<div class="col-6"><div class="card pb-1 pt-4"><h5>Ihr Ansprechpartner</h5><div class="row">`;
+                                                            if (indata[0]._raw.c_bildAnsprechsperson != undefined) {
+                                                                html += `<div class="col-3"><img src="` + indata[0]._raw.c_bildAnsprechsperson.url + `" class="mx-auto w-100 lazy" alt=""></div>`;
+                                                            }
+                                                            html += `<div class="col-9">
+                                                            <h6 class="sans mb-2">` + indata[0]._raw.c_nameAnsprechsperson + `</h6>
+                                                            <p class="small mb-0">` + indata[0]._raw.c_funktionAnsprechsperon + `</p>`;
+                                                            if (indata[0]._raw.c_direkteEmailAnsprechsperson != undefined || indata[0]._raw.c_direkteTelefonnummerAnsprechsperson != undefined) {
+                                                            html += `<p>`;
+                                                            if (indata[0]._raw.c_direkteEmailAnsprechsperson != undefined) {
+                                                                html += `<a href="mailto:` + indata[0]._raw.c_direkteEmailAnsprechsperson + `">` + indata[0]._raw.c_direkteEmailAnsprechsperson + `</a><br>`
+                                                            }
+                                                            if (indata[0]._raw.c_direkteTelefonnummerAnsprechsperson != undefined) {
+                                                                html += `<a href="tel:` + indata[0]._raw.c_direkteTelefonnummerAnsprechsperson + `">` + indata[0]._raw.c_direkteTelefonnummerAnsprechsperson + `</a><br>`
+                                                            }
+                                                            html += `</p>`;
+                                                        }
+                                                        html += `</div></div></div></div>`;
+                                                    }
+                                                    html += `</div></div>`;
+
+                                                    if (indata[0]._raw.c_angebote != undefined){
+                                                        html += `<h5 class="mt-4">Angebote</h5><div class="row addprodukte">`;
+                                                        for (var ii = 0; indata[0]._raw.c_angebote.length > ii; ii++) {
+                                                            
+                                                            var settings = {
+                                                                "url": "https://mylsintern.mls-test.ch/proxy.php?url=https%3A%2F%2Fapi.yext.com%2Fv2%2Faccounts%2Fme%2Fentities%2F" + indata[0]._raw.c_angebote[ii].entityId + "%3Fapi_key%3D363d957fd00a1eec9fe9d9099c3c514d%26v%3D20221212",
+                                                                "method": "GET",
+                                                            };
+
+                                                            $.ajax(settings).done(function (response) {
+                                                                console.log(response);
+                                                                response = JSON.parse(response);
+                                                                console.log(response);
+                                                                $(".addprodukte").html($(".addprodukte").html() + `<div class="col-4 mb-4">
+                                                                <div class="card">
+                                                                    <div class="row pb-3">
+                                                                        <div class="col-auto">
+                                                                            <div class="heading-icon type3">
+                                                                                <i class="` + response.response.c_icon + `" aria-hidden="true"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col align-self-center">
+                                                                            <h4 class="card-title sans">` + response.response.name + `</h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <p>` + response.response.description + `</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>`);
+                                                            });
+                                                        }
+                                                        html += `</div>`;
+                                                    }
+
+                                                    if (indata[0]._raw.c_teammiglieder != undefined){
+                                                        html += `<h5 class="mt-4">Mitarbeiter</h5><div class="row addmitarbeiter">`;
+                                                        for (var ii = 0; indata[0]._raw.c_teammiglieder.length > ii; ii++) {
+                                                            
+                                                            var settings = {
+                                                                "url": "https://mylsintern.mls-test.ch/proxy.php?url=https%3A%2F%2Fapi.yext.com%2Fv2%2Faccounts%2Fme%2Fentities%2F" + indata[0]._raw.c_teammiglieder[ii].entityId + "%3Fapi_key%3D363d957fd00a1eec9fe9d9099c3c514d%26v%3D20221212",
+                                                                "method": "GET",
+                                                            };
+
+                                                            $.ajax(settings).done(function (response) {
+                                                                console.log(response);
+                                                                response = JSON.parse(response);
+                                                                console.log(response);
+                                                                $(".addmitarbeiter").html($(".addmitarbeiter").html() + `<div class="col-3 mb-4"><div class="card">`);
+                                                                if (response.response.c_portrait.url != undefined){
+                                                                    $(".addmitarbeiter").html($(".addmitarbeiter").html() + `<div class="mx-auto w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden"><img class="of-cover lazy" src="` + response.response.c_portrait.url + `" width="800" height="742" alt="14"></div>`);
+                                                                }
+                                                                $(".addmitarbeiter").html($(".addmitarbeiter").html() + `<div class="ms-3 ms-sm-3 ms-lg-0">
+                                                                    <h6 class="sans mb-2 mt-2 mt-lg-4">` + response.response.name + `</h6>
+                                                                    <p class="small mb-0">` + response.response.c_jobTitel + `</p>
+                                                                </div></div></div>`);
+                                                            });
+                                                        }
+                                                        html += `</div>`;
+                                                    }
+                                                    
+                                                    html += `<div class="link-btn mt-4" onclick="window.location.href = '` + indata[0]._raw.landingPageUrl + `'">
+                                                                        Zum Bestatter
+                                                                    </div>`;
+                                                    html += `</div>
+                                                            </div>`;
+                                                } else {
+                                                    for (var ii = 0; indata.length > ii; ii++) {
+                                                        html += `<div class="col-6 mb-4">
+                                                                <div class="card">`;
+                                                        if (indata[ii]._raw.logo != undefined) {
+                                                            html += `<div class="row pb-5"><div class="col d-flex"><img src="` + indata[ii]._raw.logo.image.url + `" class="mx-auto w-50 lazy" alt=""></div></div>`;
+                                                        }
+                                                        html += `<div class="content">
+                                                                        <h4 class="h5 mb-3">` + indata[ii].title + `</h4>
+                                                                        <p class="">` + indata[ii]._raw.address.line1 + `<br>` + indata[ii]._raw.address.postalCode + ' ' + indata[ii]._raw.address.city;
+                                                        if (indata[ii]._raw.address.countryCode != "CH") {
+                                                            html += " " + indata[ii]._raw.address.countryCode;
+                                                        }
+                                                        html += `</p>`;
+                                                        if (indata[0]._raw.emails[0] != undefined || indata[0]._raw.mainPhone != undefined || indata[0]._raw.website != undefined) {
+                                                            html += `<p>`;
+                                                            if (indata[ii]._raw.emails != undefined) {
+                                                                html += `<a href="mailto:` + indata[ii]._raw.emails[0] + `">` + indata[ii]._raw.emails[0] + `</a><br>`
+                                                            }
+                                                            if (indata[ii]._raw.mainPhone != undefined) {
+                                                                html += `<a href="tel:` + indata[ii]._raw.mainPhone + `">` + indata[ii]._raw.mainPhone + `</a><br>`
+                                                            }
+                                                            if (indata[ii]._raw.website != undefined) {
+                                                                html += `<a href="` + indata[ii]._raw.website + `">` + indata[ii]._raw.website + `</a><br>`
+                                                            }
+                                                            html += `</p>`;
+                                                        }
+                                                        html += `</div>`;
+                                                        html += `<div class="link-btn" onclick="window.location.href = '` + indata[ii]._raw.landingPageUrl + `'">
+                                                                        Zum Bestatter
+                                                                    </div>`;
+                                                        html += `</div>
+                                                            </div>`;
+                                                    }
+                                                }
+
+                                                html += `</div></div>`;
                                             }
+
+
+
+
+                                            /*
+                                                FAQ
+                                            */
+
+                                            if (data.sections[i].verticalConfigId == "faqs") {
+                                                var indata = data.sections[i].results;
+                                                console.log(indata);
+                                                html += `<div class="container"><div class="row"><h3 class="mt-4">FAQs</h3>`;
+                                                for (var ii = 0; indata.length > ii; ii++) {
+                                                    html += `<div class="collapse-container collapsed">
+                                                        <div class="card">
+                                                            <div data-bs-toggle="collapse" href="#faqs` + ii + `">
+                                                                <div class="faq-header">
+                                                                    <p class="question" style="color:#2F5D63;">
+                                                                        ` + indata[ii]._raw.question + `
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="collapse" id="faqs` + ii + `">
+                                                                <p>` + mdconverter.makeHtml(indata[ii]._raw.answer) + `</p>`;
+                                                    if (indata[ii]._raw.landingPageUrl != undefined) {
+                                                        html += `<div class="link-btn" onclick="window.location.href = '` + indata[ii]._raw.landingPageUrl + `'">
+                                                                        Mehr erfahren
+                                                                    </div>`;
+                                                    }
+                                                    html += `<div class="spacer"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>`;
+                                                }
+                                                html += `</div></div>`;
+                                            }
+
+
+
+
+
+
+
+
+
+
+
+
                                         }
                                     }
+                                    //html += JSON.stringify(data.sections);
+
+
+                                    return html;
                                 }
                             });
-                            
+
                         }
                     </script>
-                    <style>                            
+                    <style>
                         .result-search-bar .yxt-AutoComplete {
                             border: 4.5px solid #2F5D63 !important;
                             border-top: 0px;
                             border-radius: 0px 0px 20px 20px;
                             background-color: #ffffff;
                         }
-                        .result-search-bar .js-yext-submit{
+
+                        .result-search-bar .js-yext-submit {
                             border-radius: 0px 10px 10px 0px;
                         }
                     </style>
@@ -3697,8 +3932,10 @@
 
 
 
-                            
-                            <div class="search-bar-searchsection-footer component yxt-Answers-component yxt-SearchBar-wrapper"></div>
+
+                            <div
+                                class="search-bar-searchsection-footer component yxt-Answers-component yxt-SearchBar-wrapper">
+                            </div>
                             <style>
                                 .search-bar-searchsection-footer {
                                     border-radius: 15px;
@@ -3711,12 +3948,13 @@
                                     background-color: #ffffff;
                                 }
 
-                                .search-bar-searchsection-footer .yxt-SearchBar-autocomplete{
+                                .search-bar-searchsection-footer .yxt-SearchBar-autocomplete {
                                     margin-left: 14px;
                                     margin-right: 14px;
                                     overflow: hidden;
                                 }
-                                .search-bar-searchsection-footer .js-yext-submit{
+
+                                .search-bar-searchsection-footer .js-yext-submit {
                                     border-radius: 0px 15px 15px 0px;
                                 }
                             </style>
@@ -3770,7 +4008,8 @@
                     </div>
                 </div>
                 <div class="col-12 offset-md-1 col-md-5 align-self-end">
-                    <img src="https://bestatterportal.ch/wp-content/themes/bestatter-ch/bestatterfile/assets/afes8-epgsv.svg" alt="">
+                    <img src="https://bestatterportal.ch/wp-content/themes/bestatter-ch/bestatterfile/assets/afes8-epgsv.svg"
+                        alt="">
                 </div>
             </div>
 
@@ -12236,7 +12475,7 @@
         src="https://bestatterportal.ch/wp-content/themes/bestatter-ch/bestatterfile/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.js"></script>
-    
+
 
 
 
@@ -12260,7 +12499,7 @@
     <!-- Initialising ANSWER Experience -->
 
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
     <script>
         var mdconverter = new showdown.Converter();
@@ -12365,7 +12604,7 @@
 
 
 
-    
+
     <script>
         $(function () {
             $('#exampleModalCenter').on('click', function () {
@@ -12386,6 +12625,6 @@
                 });
         });
     </script>
-    </body>
-    
-    </html>
+</body>
+
+</html>
