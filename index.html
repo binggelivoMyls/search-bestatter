@@ -3568,7 +3568,21 @@
                             });
 
                             ANSWERS.addComponent("DirectAnswer", {
-                                container: ".result-direct-answer"
+                                container: ".result-direct-answer",
+                                render: function(data){
+                                    console.log(data);
+                                    html = `<div class="container"><div class="row"><h3 class="mt-4">Schnellantwort</h3><div class="col-12 mb-4">
+                                                                <div class="card">`;
+                                    //html += "<p>" + JSON.stringify(data) + "</p>";
+                                    if (data.answer.fieldApiName == "address"){
+                                        html += "<h4>" + data.answer.entityName + "</h4>";
+                                    }
+                                    if (data.answer.fieldApiName == "mainPhone"){
+                                        html += "<h4>" + data.answer.entityName + "</h4>";
+                                    }
+                                    html += `</div></div></div></div>`;
+                                    return html;
+                                }
                             });
 
                             ANSWERS.addComponent('Map', {
@@ -3732,7 +3746,7 @@
                                                             </div>`;
                                                 } else {
                                                     for (var ii = 0; indata.length > ii; ii++) {
-                                                        html += `<div class="col-6 mb-4">
+                                                        html += `<div class="col-lg-6 mb-4">
                                                                 <div class="card">`;
                                                         if (indata[ii]._raw.logo != undefined) {
                                                             html += `<div class="row pb-5"><div class="col d-flex"><img src="` + indata[ii]._raw.logo.image.url + `" class="mx-auto w-50 lazy" alt=""></div></div>`;
