@@ -1,4 +1,4 @@
-<html lang="de-DE">
+<html lang="fr-FR">
 
 <head>
     <style type="text/css">
@@ -2146,7 +2146,7 @@
                                     ANSWERS.addComponent("SearchBar", {
                                         container: ".search-bar-searchsection",
                                         customIconUrl: "https://bestatterportal.ch/wp-content/themes/bestatter-ch/bestatterfile/assets/searchglass.png",
-                                        redirectUrl: "https://bestatterportal.ch/result/",
+                                        redirectUrl: redirecturi,
                                         name: "search-bar-searchsection"
                                     });
 
@@ -12521,7 +12521,16 @@
         var api = "5fd6169ead4405e6d9cac2af2bea513f";
         var experienceKey = "bestatter-finden";
         var businessId = "3567041";
-        var locale = "de";
+        var locale = $("html").attr("lang").slice(0,2);
+        if (locale == "fr"){
+            var redirecturi = "https://bestatterportal.ch/fr/resultat/"
+        } else if (locale == "it"){
+            var redirecturi = "https://bestatterportal.ch/it/risultato/"
+        } else if (locale == "en"){
+            var redirecturi = "https://bestatterportal.ch/en/result/"
+        } else {
+            var redirecturi = "https://bestatterportal.ch/result/"
+        }
 
         ANSWERS.init({
             apiKey: api,
@@ -12538,7 +12547,7 @@
                 this.addComponent("SearchBar", {
                     container: ".search-bar-searchsection-footer",
                     customIconUrl: "https://bestatterportal.ch/wp-content/themes/bestatter-ch/bestatterfile/assets/searchglass.png",
-                    redirectUrl: "https://bestatterportal.ch/result/",
+                    redirectUrl: redirecturi,
                     name: "search-bar-searchsection-footer"
                 });
                 var url = `https://liveapi.yext.com/v2/accounts/me/answers/autocomplete`;
