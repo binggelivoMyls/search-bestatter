@@ -12524,13 +12524,53 @@
         var locale = $("html").attr("lang").slice(0,2);
         if (locale == "fr"){
             var redirecturi = "https://bestatterportal.ch/fr/resultat/"
+            var langforsearch = {
+                "Schnellantwort": "Réponse rapide",
+                "Bestattungsunternehmen": "Pompes funèbres",
+                "ansprechpartner":"Votre contact",
+                "angebote": "Offres",
+                "mitarbeiter": "Employés",
+                "abesttater":"Vers les pompes funèbres",
+                "faq": "FAQ",
+                "mehranz": "En savoir plus"
+            }
         } else if (locale == "it"){
-            var redirecturi = "https://bestatterportal.ch/it/risultato/"
+            var redirecturi = "https://bestatterportal.ch/it/risultato/";
+            var langforsearch = {
+                "Schnellantwort": "Risposta rapida",
+                "Bestattungsunternehmen": "Pompe funebri",
+                "ansprechpartner":"Il vostro contatto",
+                "angebote": "Offerte",
+                "mitarbeiter": "Personale",
+                "abesttater":"All'impresario di pompe funebri",
+                "faq": "Domande frequenti",
+                "mehranz": "Per saperne di più"
+            }
         } else if (locale == "en"){
-            locale = "en_CH";
-            var redirecturi = "https://bestatterportal.ch/en/result/"
+			locale = "en_CH";
+            var redirecturi = "https://bestatterportal.ch/en/result/";
+            var langforsearch = {
+                "Schnellantwort": "Quick response",
+                "Bestattungsunternehmen": "Undertaker",
+                "ansprechpartner":"Your contact",
+                "angebote": "Offers",
+                "mitarbeiter": "Employees",
+                "abesttater":"To the undertaker",
+                "faq": "FAQs",
+                "mehranz": "Learn more"
+            }
         } else {
             var redirecturi = "https://bestatterportal.ch/result/"
+            var langforsearch = {
+                "Schnellantwort": "Schnellantwort",
+                "Bestattungsunternehmen": "Bestattungsunternehmen",
+                "ansprechpartner":"Ihr Ansprechpartner",
+                "angebote": "Angebote",
+                "mitarbeiter": "Mitarbeiter",
+                "abesttater":"Zum Bestatter",
+                "faq": "FAQs",
+                "mehranz": "Mehr erfahren"
+            }
         }
 
         ANSWERS.init({
