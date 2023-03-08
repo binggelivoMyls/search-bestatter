@@ -3515,6 +3515,58 @@
         </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="section">
             <div class="container-xl">
                 <div class="row">
@@ -3571,7 +3623,7 @@
                                 container: ".result-direct-answer",
                                 render: function(data){
                                     console.log(data);
-                                    html = `<div class="container"><div class="row"><h3 class="mt-4">Schnellantwort</h3><div class="col-12 mb-4">
+                                    html = `<div class="container"><div class="row"><h3 class="mt-4">` + langforsearch["Schnellantwort"] + `</h3><div class="col-12 mb-4">
                                                                 <div class="card">`;
                                     //html += "<p>" + JSON.stringify(data) + "</p>";
                                     if (data.answer.fieldApiName == "address"){
@@ -3626,7 +3678,7 @@
                                             if (data.sections[i].verticalConfigId == "standorte") {
                                                 var indata = data.sections[i].results;
                                                 console.log(indata);
-                                                html += `<div class="container"><div class="row"><h3 class="mt-4">Bestattungsunternehmen</h3>`;
+                                                html += `<div class="container"><div class="row"><h3 class="mt-4">` + langforsearch["Bestattungsunternehmen"] + `</h3>`;
                                                 if (indata.length == 1) {
                                                     html += `<div class="col-12 mb-4">
                                                                 <div class="card">`;
@@ -3636,7 +3688,7 @@
                                                     html += `<div class="content">
                                                                 <h4 class="h5 mb-3">` + indata[0].title + `</h4>
                                                                 <div class="row">
-                                                                <div class="col-6">
+                                                                <div class="col-lg-6">
                                                                 <p class="">` + indata[0]._raw.address.line1 + `<br>` + indata[0]._raw.address.postalCode + ' ' + indata[0]._raw.address.city;
                                                     if (indata[0]._raw.address.countryCode != "CH") {
                                                         html += " " + indata[0]._raw.address.countryCode;
@@ -3648,7 +3700,7 @@
                                                             html += `<a href="mailto:` + indata[0]._raw.emails[0] + `">` + indata[0]._raw.emails[0] + `</a><br>`
                                                         }
                                                         if (indata[0]._raw.mainPhone != undefined) {
-                                                            html += `<a href="tel:` + indata[0]._raw.mainPhone + `">` + indata[0]._raw.mainPhone + `</a><br>`
+                                                            html += `<a href="tel:` + indata[0]._raw.mainPhone + `" style="text-decoration:none">` + indata[0]._raw.mainPhone + `</a><br>`
                                                         }
                                                         if (indata[0]._raw.website != undefined) {
                                                             html += `<a href="` + indata[0]._raw.website + `">` + indata[0]._raw.website + `</a><br>`
@@ -3657,7 +3709,7 @@
                                                     }
                                                     html += `</div>`;
                                                     if (indata[0]._raw.c_nameAnsprechsperson != undefined) {
-                                                        html += `<div class="col-6"><div class="card pb-1 pt-4"><h5>Ihr Ansprechpartner</h5><div class="row">`;
+                                                        html += `<div class="col-lg-6"><div class="card pb-1 pt-4"><h5>` + langforsearch["ansprechpartner"] + `</h5><div class="row">`;
                                                             if (indata[0]._raw.c_bildAnsprechsperson != undefined) {
                                                                 html += `<div class="col-3"><img src="` + indata[0]._raw.c_bildAnsprechsperson.url + `" class="mx-auto w-100 lazy" alt=""></div>`;
                                                             }
@@ -3679,7 +3731,7 @@
                                                     html += `</div></div>`;
 
                                                     if (indata[0]._raw.c_angebote != undefined){
-                                                        html += `<h5 class="mt-4">Angebote</h5><div class="row addprodukte">`;
+                                                        html += `<h5 class="mt-4">` + langforsearch["angebote"] + `</h5><div class="row addprodukte">`;
                                                         for (var ii = 0; indata[0]._raw.c_angebote.length > ii; ii++) {
                                                             
                                                             var settings = {
@@ -3691,7 +3743,7 @@
                                                                 console.log(response);
                                                                 response = JSON.parse(response);
                                                                 console.log(response);
-                                                                $(".addprodukte").html($(".addprodukte").html() + `<div class="col-4 mb-4">
+                                                                $(".addprodukte").html($(".addprodukte").html() + `<div class="col-lg-4 mb-4">
                                                                 <div class="card">
                                                                     <div class="row pb-3">
                                                                         <div class="col-auto">
@@ -3714,7 +3766,8 @@
                                                     }
 
                                                     if (indata[0]._raw.c_teammiglieder != undefined){
-                                                        html += `<h5 class="mt-4">Mitarbeiter</h5><div class="row addmitarbeiter">`;
+                                                        console.log(indata[0]._raw.c_teammiglieder);
+                                                        html += `<h5 class="mt-4">` + langforsearch["mitarbeiter"] + `</h5><div class="row addmitarbeiter">`;
                                                         for (var ii = 0; indata[0]._raw.c_teammiglieder.length > ii; ii++) {
                                                             
                                                             var settings = {
@@ -3722,25 +3775,29 @@
                                                                 "method": "GET",
                                                             };
 
+                                                            
+
                                                             $.ajax(settings).done(function (response) {
-                                                                console.log(response);
+                                                                var htmladdmitarb = "";
                                                                 response = JSON.parse(response);
-                                                                console.log(response);
-                                                                $(".addmitarbeiter").html($(".addmitarbeiter").html() + `<div class="col-3 mb-4"><div class="card">`);
+                                                                htmladdmitarb += `<div class="col-lg-3 mb-4"><div class="card">`;
                                                                 if (response.response.c_portrait.url != undefined){
-                                                                    $(".addmitarbeiter").html($(".addmitarbeiter").html() + `<div class="mx-auto w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden"><img class="of-cover lazy" src="` + response.response.c_portrait.url + `" width="800" height="742" alt="14"></div>`);
+                                                                    htmladdmitarb += `<div class="mx-auto w-25 w-lg-50 ratio ratio-1x1 rounded-circle overflow-hidden"><img class="of-cover lazy" src="` + response.response.c_portrait.url + `" width="800" height="742" alt="14"></div>`;
                                                                 }
-                                                                $(".addmitarbeiter").html($(".addmitarbeiter").html() + `<div class="ms-3 ms-sm-3 ms-lg-0">
+                                                                htmladdmitarb += `<div class="ms-3 ms-sm-3 ms-lg-0">
                                                                     <h6 class="sans mb-2 mt-2 mt-lg-4">` + response.response.name + `</h6>
                                                                     <p class="small mb-0">` + response.response.c_jobTitel + `</p>
-                                                                </div></div></div>`);
+                                                                </div></div></div>`;
+                                                                console.log(htmladdmitarb);
+                                                                console.log(ii);
+                                                                $(".addmitarbeiter").html($(".addmitarbeiter").html() + htmladdmitarb);
                                                             });
                                                         }
                                                         html += `</div>`;
                                                     }
                                                     
                                                     html += `<div class="link-btn mt-4" onclick="window.location.href = '` + indata[0]._raw.landingPageUrl + `'">
-                                                                        Zum Bestatter
+                                                                        ` + langforsearch["abesttater"] + `
                                                                     </div>`;
                                                     html += `</div>
                                                             </div>`;
@@ -3773,7 +3830,7 @@
                                                         }
                                                         html += `</div>`;
                                                         html += `<div class="link-btn" onclick="window.location.href = '` + indata[ii]._raw.landingPageUrl + `'">
-                                                                        Zum Bestatter
+                                                                ` + langforsearch["abesttater"] + `
                                                                     </div>`;
                                                         html += `</div>
                                                             </div>`;
@@ -3793,7 +3850,7 @@
                                             if (data.sections[i].verticalConfigId == "faqs") {
                                                 var indata = data.sections[i].results;
                                                 console.log(indata);
-                                                html += `<div class="container"><div class="row"><h3 class="mt-4">FAQs</h3>`;
+                                                html += `<div class="container"><div class="row"><h3 class="mt-4">` + langforsearch["faq"] + `</h3>`;
                                                 for (var ii = 0; indata.length > ii; ii++) {
                                                     html += `<div class="collapse-container collapsed">
                                                         <div class="card">
@@ -3808,7 +3865,7 @@
                                                                 <p>` + mdconverter.makeHtml(indata[ii]._raw.answer) + `</p>`;
                                                     if (indata[ii]._raw.landingPageUrl != undefined) {
                                                         html += `<div class="link-btn" onclick="window.location.href = '` + indata[ii]._raw.landingPageUrl + `'">
-                                                                        Mehr erfahren
+                                                            ` + langforsearch["mehranz"] + `
                                                                     </div>`;
                                                     }
                                                     html += `<div class="spacer"></div>
