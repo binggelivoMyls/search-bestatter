@@ -3679,7 +3679,7 @@
                                                 var indata = data.sections[i].results;
                                                 console.log(indata);
                                                 html += `<div class="container"><div class="row"><h3 class="mt-4">` + langforsearch["Bestattungsunternehmen"] + `</h3>`;
-                                                if (indata.length == 1) {
+                                                /*if (indata.length == 1) {
                                                     html += `<div class="col-12 mb-4">
                                                                 <div class="card">`;
                                                     if (indata[0]._raw.logo != undefined) {
@@ -3801,7 +3801,7 @@
                                                                     </div>`;
                                                     html += `</div>
                                                             </div>`;
-                                                } else {
+                                                } else {*/
                                                     for (var ii = 0; indata.length > ii; ii++) {
                                                         html += `<div class="col-lg-6 mb-4">
                                                                 <div class="card">`;
@@ -3835,7 +3835,7 @@
                                                         html += `</div>
                                                             </div>`;
                                                     }
-                                                }
+                                                //}
 
                                                 html += `</div></div>`;
                                             }
