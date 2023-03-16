@@ -3754,10 +3754,10 @@
                                                         html += `<div class="col-lg-6 mb-4">
                                                                 <div class="card">`;
                                                         if (indata[ii]._raw.logo != undefined) {
-                                                            html += `<div class="row pb-5"><div class="col d-flex"><img src="` + indata[ii]._raw.logo.image.url + `" class="mx-auto w-50 lazy" alt=""></div></div>`;
+                                                            html += `<a class="row pb-5" href="` + indata[ii]._raw.landingPageUrl + `"><div class="col d-flex"><img src="` + indata[ii]._raw.logo.image.url + `" class="mx-auto w-50 lazy" alt=""></div></a>`;
                                                         }
                                                         html += `<div class="content">
-                                                                        <h4 class="h5 mb-3">` + indata[ii].title + `</h4>
+                                                                        <a style="text-decoration: none;" href="` + indata[ii]._raw.landingPageUrl + `"><h4 class="h5 mb-3">` + indata[ii].title + `</h4></a>
                                                                         <p class="">` + indata[ii]._raw.address.line1 + `<br>` + indata[ii]._raw.address.postalCode + ' ' + indata[ii]._raw.address.city;
                                                         if (indata[ii]._raw.address.countryCode != "CH") {
                                                             html += " " + indata[ii]._raw.address.countryCode;
@@ -3766,20 +3766,24 @@
                                                         if (indata[0]._raw.emails[0] != undefined || indata[0]._raw.mainPhone != undefined || indata[0]._raw.website != undefined) {
                                                             html += `<p>`;
                                                             if (indata[ii]._raw.emails != undefined) {
-                                                                html += `<a href="mailto:` + indata[ii]._raw.emails[0] + `">` + indata[ii]._raw.emails[0] + `</a><br>`
+                                                                html += `<a style="text-decoration: none;" href="mailto:` + indata[ii]._raw.emails[0] + `">` + indata[ii]._raw.emails[0] + `</a><br>`
                                                             }
                                                             if (indata[ii]._raw.mainPhone != undefined) {
-                                                                html += `<a href="tel:` + indata[ii]._raw.mainPhone + `">` + indata[ii]._raw.mainPhone + `</a><br>`
+                                                                if (indata[ii]._raw.mainPhone.search(/^\+41/gm) >= 0){
+                                                                    html += `<a style="text-decoration: none;" href="tel:` + indata[ii]._raw.mainPhone + `">` + indata[ii]._raw.mainPhone.replace(/\s/, "").replace(/^((00|\+)[0-9]{2,5}|0)([1-9][0-9])([0-9][0-9][0-9])([0-9][0-9])([0-9][0-9])$/m, "0$3 $4 $5 $6") + `</a><br>`
+                                                                }else{
+                                                                    html += `<a style="text-decoration: none;" href="tel:` + indata[ii]._raw.mainPhone + `">` + indata[ii]._raw.mainPhone + `</a><br>`
+                                                                }
                                                             }
                                                             if (indata[ii]._raw.website != undefined) {
-                                                                html += `<a href="` + indata[ii]._raw.website + `">` + indata[ii]._raw.website + `</a><br>`
+                                                                html += `<a style="text-decoration: none;" href="` + indata[ii]._raw.website + `">www.` + indata[ii]._raw.website.replace(/^(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)/m, "") + `</a><br>`
                                                             }
                                                             html += `</p>`;
                                                         }
                                                         html += `</div>`;
-                                                        html += `<div class="link-btn" onclick="window.location.href = '` + indata[ii]._raw.landingPageUrl + `'">
+                                                        html += `<a class="link-btn" href = "` + indata[ii]._raw.landingPageUrl + `">
                                                                 ` + langforsearch["abesttater"] + `
-                                                                    </div>`;
+                                                                    </a>`;
                                                         html += `</div>
                                                             </div>`;
                                                     }
